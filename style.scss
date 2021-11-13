@@ -1,0 +1,156 @@
+//*Fonts
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+@font-face {
+  font-family: "fleshandblood";
+  src: url("fleshandblood.woff2") format("woff2"),
+    url("fleshandblood.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+//*resets
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+//*colors
+$floral-white: #fffcf2ff;
+$pale-silver: #ccc5b9ff;
+$black-olive: #403d39ff;
+$eerie-black: #252422ff;
+$flame: rgb(235, 40, 40);
+
+//*mixins
+
+@mixin hoverList {
+  cursor: pointer;
+  font-size: 1.5em;
+  transition: 1s;
+}
+
+@mixin list {
+  color: $floral-white;
+  font-family: "Roboto", sans-serif;
+  list-style: none;
+  text-decoration: none;
+  font-size: 1.2em;
+  // font-weight: 300;
+}
+
+@mixin icons {
+  display: block;
+  color: $floral-white;
+}
+
+@mixin links {
+  text-decoration: none;
+  color: $floral-white;
+  cursor: pointer;
+}
+
+//*header
+
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  .navbar {
+    background-color: $black-olive;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 80px;
+    a {
+      @include links;
+      padding: 2%;
+      margin: 2;
+      font-family: "fleshandblood", sans-serif;
+      font-weight: 500;
+      font-size: 3em;
+
+      span {
+        color: rgb(153, 20, 20);
+      }
+
+      &:hover {
+        font-size: 3.1em;
+        text-shadow: 0 0 10px $flame;
+        transition: 1s ease-in-out;
+        color: $floral-white;
+      }
+    }
+
+    ul {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-evenly;
+      width: 60%;
+      li {
+        list-style: none;
+        padding: 2%;
+        margin-top: 1%;
+        font-size: 1.2em;
+        a.navLinks {
+          @include list;
+          &:hover {
+            color: $floral-white;
+            cursor: pointer;
+            text-shadow: 0 0 10px $flame;
+            transition: 1s;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+//*body
+p,
+h1,
+h2 {
+  color: $floral-white;
+}
+
+body {
+  background-color: $eerie-black;
+}
+
+.bienvenidos {
+  img {
+    width: 100%;
+  }
+
+  h1{
+    text-align: center;
+    font-size: 4em;
+    position: relative;
+    bottom: 12em;
+    left: 3em;
+
+    span {
+      font-family: "fleshandblood", sans-serif;
+      color: $flame;
+      font-weight: 800;
+    }
+  }
+  p{
+    position: relative;
+    bottom: 2em;
+  }
+    button {}
+  
+}

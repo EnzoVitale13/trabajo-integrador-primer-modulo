@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@font-face {
+  font-family: "fleshandblood";
+  src: url("fleshandblood.woff2") format("woff2"), url("fleshandblood.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+header .navbar {
+  background-color: #403d39ff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 100%;
+  height: 80px;
+}
+
+header .navbar a {
+  text-decoration: none;
+  color: #fffcf2ff;
+  cursor: pointer;
+  padding: 2%;
+  margin: 2;
+  font-family: "fleshandblood", sans-serif;
+  font-weight: 500;
+  font-size: 3em;
+}
+
+header .navbar a span {
+  color: #991414;
+}
+
+header .navbar a:hover {
+  font-size: 3.1em;
+  text-shadow: 0 0 10px #eb2828;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+  color: #fffcf2ff;
+}
+
+header .navbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 60%;
+}
+
+header .navbar ul li {
+  list-style: none;
+  padding: 2%;
+  margin-top: 1%;
+  font-size: 1.2em;
+}
+
+header .navbar ul li a.navLinks {
+  color: #fffcf2ff;
+  font-family: "Roboto", sans-serif;
+  list-style: none;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+header .navbar ul li a.navLinks:hover {
+  color: #fffcf2ff;
+  cursor: pointer;
+  text-shadow: 0 0 10px #eb2828;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+p,
+h1,
+h2 {
+  color: #fffcf2ff;
+}
+
+body {
+  background-color: #252422ff;
+}
+
+.bienvenidos img {
+  width: 100%;
+}
+
+.bienvenidos h1 {
+  text-align: center;
+  font-size: 4em;
+  position: relative;
+  bottom: 12em;
+  left: 3em;
+}
+
+.bienvenidos h1 span {
+  font-family: "fleshandblood", sans-serif;
+  color: #eb2828;
+  font-weight: 800;
+}
+
+.bienvenidos p {
+  position: relative;
+  bottom: 2em;
+}
+/*# sourceMappingURL=style.css.map */
