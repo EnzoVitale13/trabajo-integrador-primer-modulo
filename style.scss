@@ -1,156 +1,133 @@
-//*Fonts
-
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-
 @font-face {
   font-family: "fleshandblood";
   src: url("fleshandblood.woff2") format("woff2"),
     url("fleshandblood.woff") format("woff");
-  font-weight: 600;
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
-//*resets
 
 * {
-  padding: 0;
   margin: 0;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-//*colors
-$floral-white: #fffcf2ff;
-$pale-silver: #ccc5b9ff;
-$black-olive: #403d39ff;
-$eerie-black: #252422ff;
-$flame: rgb(235, 40, 40);
-
-//*mixins
-
-@mixin hoverList {
-  cursor: pointer;
-  font-size: 1.5em;
-  transition: 1s;
-}
-
-@mixin list {
-  color: $floral-white;
-  font-family: "Roboto", sans-serif;
+  padding: 0;
   list-style: none;
-  text-decoration: none;
-  font-size: 1.2em;
-  // font-weight: 300;
 }
 
-@mixin icons {
-  display: block;
-  color: $floral-white;
-}
-
-@mixin links {
-  text-decoration: none;
-  color: $floral-white;
-  cursor: pointer;
-}
-
-//*header
-
-
-header {
-  position: sticky;
-  top: 0;
-  z-index: 5;
-  .navbar {
-    background-color: $black-olive;
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 100%;
-    height: 80px;
-    a {
-      @include links;
-      padding: 2%;
-      margin: 2;
-      font-family: "fleshandblood", sans-serif;
-      font-weight: 500;
-      font-size: 3em;
-
-      span {
-        color: rgb(153, 20, 20);
-      }
-
-      &:hover {
-        font-size: 3.1em;
-        text-shadow: 0 0 10px $flame;
-        transition: 1s ease-in-out;
-        color: $floral-white;
-      }
-    }
-
-    ul {
-      display: flex;
-      flex-wrap: nowrap;
-      justify-content: space-evenly;
-      width: 60%;
-      li {
-        list-style: none;
-        padding: 2%;
-        margin-top: 1%;
-        font-size: 1.2em;
-        a.navLinks {
-          @include list;
-          &:hover {
-            color: $floral-white;
-            cursor: pointer;
-            text-shadow: 0 0 10px $flame;
-            transition: 1s;
-          }
-        }
-      }
-    }
-  }
-}
-
-
-//*body
-p,
-h1,
-h2 {
-  color: $floral-white;
+.menu-toggle{
+    display: none;
 }
 
 body {
-  background-color: $eerie-black;
+  background-color: black;
+  color: white;
 }
 
-.bienvenidos {
-  img {
-    width: 100%;
-  }
+//*Header
 
-  h1{
-    text-align: center;
-    font-size: 4em;
-    position: relative;
-    bottom: 12em;
-    left: 3em;
-
-    span {
+header {
+  display: flex;
+  flex-direction: column;
+  .navBar {
+    padding: 1%;
+    height: 60px;
+    background-color: rgb(24, 24, 24);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    .logo {
+      padding: 2%;
+      border-radius: 5px;
+      font-size: 2em;
+      margin-top: 2%;
+      margin-left: 2%;
+      color: white;
       font-family: "fleshandblood", sans-serif;
-      color: $flame;
-      font-weight: 800;
+      font-weight: bold;
+      text-decoration: none;
+      &:hover{
+          transform: scale(1.1);
+          transition: 1s;
+      }
+      span {
+        color: red;
+      }
+    }
+    
+    .menu-button{
+        font-size: 2em;
+        padding: 5px;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+        background-color: #0a66c3;
+    }
+    
+    .toggle{
+        display: none;
+        position: absolute;
+        top: 64px;
+        right: 0px;
+        text-align: center;
+        background-color: rgb(24, 24, 24);
+        padding: 20px;
+        width: 100%;
+        margin: -3px auto;
+        transform-origin: top;
+        transition: 2s linear;
+        li{
+            a{
+            text-decoration: none;
+            list-style: none;
+            display: block;
+            padding: 10px 0;
+            color: white;
+            &:hover{
+                color: red;
+            }
+            }
+        }
+    }
+
+    .menu-toggle:checked+ .toggle{
+        display: block;
+    }
+    // ul {
+    //   display: none;
+    //   background-color: rgb(24, 24, 24);
+    //   position: absolute;
+    //   top: 4em;
+    //   right: 1em;
+    // }
+  }
+}
+
+
+/////////////////////
+//*main
+.bienvenidos {
+  h1 {
+    text-align: center;
+    color: white;
+    span {
+      color: red;
+      font-family: "fleshandblood", sans-serif;
     }
   }
-  p{
-    position: relative;
-    bottom: 2em;
+  .doll {
+    width: 160px;
+
   }
-    button {}
-  
 }
+
+//*footer
+
+///////////////////////////////
+//!mediaQueries
+
+// @media (max-width: 768px) {
+//     .hamburguer{
+//     display: none;
+//     }
+// }

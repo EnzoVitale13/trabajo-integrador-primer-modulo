@@ -1,137 +1,128 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @font-face {
   font-family: "fleshandblood";
   src: url("fleshandblood.woff2") format("woff2"), url("fleshandblood.woff") format("woff");
-  font-weight: 600;
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-html {
-  scroll-behavior: smooth;
+.menu-toggle {
+  display: none;
+}
+
+body {
+  background-color: black;
+  color: white;
 }
 
 header {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  z-index: 5;
-}
-
-header .navbar {
-  background-color: #403d39ff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-line-pack: center;
-      align-content: center;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+header .navBar {
+  padding: 1%;
+  height: 60px;
+  background-color: #181818;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  width: 100%;
-  height: 80px;
-}
-
-header .navbar a {
-  text-decoration: none;
-  color: #fffcf2ff;
-  cursor: pointer;
-  padding: 2%;
-  margin: 2;
-  font-family: "fleshandblood", sans-serif;
-  font-weight: 500;
-  font-size: 3em;
-}
-
-header .navbar a span {
-  color: #991414;
-}
-
-header .navbar a:hover {
-  font-size: 3.1em;
-  text-shadow: 0 0 10px #eb2828;
-  -webkit-transition: 1s ease-in-out;
-  transition: 1s ease-in-out;
-  color: #fffcf2ff;
-}
-
-header .navbar ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  width: 60%;
 }
 
-header .navbar ul li {
-  list-style: none;
+header .navBar .logo {
   padding: 2%;
-  margin-top: 1%;
-  font-size: 1.2em;
-}
-
-header .navbar ul li a.navLinks {
-  color: #fffcf2ff;
-  font-family: "Roboto", sans-serif;
-  list-style: none;
+  border-radius: 5px;
+  font-size: 2em;
+  margin-top: 2%;
+  margin-left: 2%;
+  color: white;
+  font-family: "fleshandblood", sans-serif;
+  font-weight: bold;
   text-decoration: none;
-  font-size: 1.2em;
 }
 
-header .navbar ul li a.navLinks:hover {
-  color: #fffcf2ff;
-  cursor: pointer;
-  text-shadow: 0 0 10px #eb2828;
+header .navBar .logo:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
   -webkit-transition: 1s;
   transition: 1s;
 }
 
-p,
-h1,
-h2 {
-  color: #fffcf2ff;
+header .navBar .logo span {
+  color: red;
 }
 
-body {
-  background-color: #252422ff;
+header .navBar .menu-button {
+  font-size: 2em;
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  background-color: #0a66c3;
 }
 
-.bienvenidos img {
+header .navBar .toggle {
+  display: none;
+  position: absolute;
+  top: 64px;
+  right: 0px;
+  text-align: center;
+  background-color: #181818;
+  padding: 20px;
   width: 100%;
+  margin: -3px auto;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-transition: 2s linear;
+  transition: 2s linear;
+}
+
+header .navBar .toggle li a {
+  text-decoration: none;
+  list-style: none;
+  display: block;
+  padding: 10px 0;
+  color: white;
+}
+
+header .navBar .toggle li a:hover {
+  color: red;
+}
+
+header .navBar .menu-toggle:checked + .toggle {
+  display: block;
 }
 
 .bienvenidos h1 {
   text-align: center;
-  font-size: 4em;
-  position: relative;
-  bottom: 12em;
-  left: 3em;
+  color: white;
 }
 
 .bienvenidos h1 span {
+  color: red;
   font-family: "fleshandblood", sans-serif;
-  color: #eb2828;
-  font-weight: 800;
 }
 
-.bienvenidos p {
-  position: relative;
-  bottom: 2em;
+.bienvenidos .doll {
+  width: 160px;
 }
 /*# sourceMappingURL=style.css.map */
