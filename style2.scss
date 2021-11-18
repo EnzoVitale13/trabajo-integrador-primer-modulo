@@ -78,6 +78,9 @@ body {
   top: 1px;
 }
 
+header .navBar .navBar2{
+  display: none;
+}
 //!header
 
 header {
@@ -393,3 +396,51 @@ footer {
     opacity: 1;
   }
 }
+
+@media (min-width: 576px) {
+  header .navBar .logo {
+    padding: 1% 2% 0%;
+  }
+}
+
+@media (min-width: 768px) {
+  header .navBar .logo{
+    padding: 1% 2% 0%;
+    font-size: 1.6em;
+  }
+  .bienvenidos .description{
+    flex-direction: row;
+    height: 480px;
+    p{
+      position: relative;
+    top: -436px;
+    left: 295px;
+    width: 404px;
+    height: 435px;
+    }
+  }
+  footer{
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+@media(min-width:1024px) {
+  header .navBar .menu-button{
+    display: none;}
+  header .navBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    .navBar2{
+      position: relative;
+      top: 8px;
+      display: flex;
+      padding: 2%;
+      .navLinks{
+        margin-left: 2em;
+        align-items: center;
+        }
+    }
+  }
+  }
