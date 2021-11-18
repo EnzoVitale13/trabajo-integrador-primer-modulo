@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap");
 @font-face {
   font-family: "fleshandblood";
-  src: url("fleshandblood.woff2") format("woff2"), url("fleshandblood.woff") format("woff");
+  src: url("./Assets/fleshandblood.woff2") format("woff2"), url("./Assets/fleshandblood.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -73,6 +73,7 @@ header {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  border-bottom: 1px solid #3a3c44;
 }
 
 header .navBar {
@@ -136,12 +137,13 @@ header .navBar .toggle {
   padding: 20px;
   width: 100%;
   margin: -3px auto;
-  border-top: 1px solid;
+  border: 1px solid #3a3c44;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
 }
 
 header .navBar .toggle li a {
+  font-size: 1.2em;
   font-family: "Montserrat", sans-serif;
   text-decoration: none;
   list-style: none;
@@ -239,6 +241,7 @@ header .navBar .menu-toggle:checked + .toggle {
   text-align: center;
   margin: 10px 10px 0px;
   padding: 10px;
+  text-shadow: 0px 0px 13px rgba(255, 255, 255, 0.3);
 }
 
 .products {
@@ -408,6 +411,8 @@ header .navBar .menu-toggle:checked + .toggle {
   height: 100%;
   -o-object-fit: fill;
      object-fit: fill;
+  border-radius: 15px;
+  border: 10px solid rgba(0, 0, 0, 0.25);
 }
 
 .contact .formBx {
@@ -440,6 +445,8 @@ header .navBar .menu-toggle:checked + .toggle {
 }
 
 footer {
+  margin-top: 30px;
+  padding: 10px 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -447,9 +454,92 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background-color: #211f2a;
+  border-top: 1px solid #3a3c44;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
 }
 
-.container {
+footer .box-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .box-container .box {
+  padding: 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #3a3c44;
+}
+
+footer .box-container .box h3 {
+  margin: 0;
+}
+
+footer .box-container .box p {
+  text-align: center;
+}
+
+footer .box-container .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  align-items: center;
+}
+
+footer .box-container .info i {
+  font-size: 20px;
+  margin: 15px;
+  position: relative;
+  text-shadow: 0px 0px 13px rgba(255, 255, 255, 0.3);
+}
+
+footer .hechoPor {
+  border-top: 1px solid #3a3c44;
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .hechoPor p {
+  text-align: center;
+  margin-top: 0px;
+}
+
+footer .container {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -462,14 +552,14 @@ footer {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 40px 0;
+  margin: 40px 0px 10px;
 }
 
-.container .card {
+footer .container .card {
   position: relative;
   width: 300px;
   height: 370px;
-  background-color: rgba(58, 60, 68, 0.1);
+  background-color: rgba(0, 0, 0, 0.1);
   margin: 20px;
   -webkit-box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
           box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
@@ -483,11 +573,11 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
 }
 
-.container .card .content {
+footer .container .card .content {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -507,7 +597,7 @@ footer {
   transition: 0.5s;
 }
 
-.container .card .content .imgBx {
+footer .container .card .content .imgBx {
   position: relative;
   width: 150px;
   height: 150px;
@@ -516,7 +606,7 @@ footer {
   border: 10px solid rgba(0, 0, 0, 0.25);
 }
 
-.container .card .content .imgBx img {
+footer .container .card .content .imgBx img {
   position: absolute;
   top: 0;
   left: 0;
@@ -526,13 +616,13 @@ footer {
      object-fit: cover;
 }
 
-.container .card .content .contentBx {
+footer .container .card .content .contentBx {
   font-size: 12px;
   font-weight: 300;
   text-transform: initial;
 }
 
-.container .card .content .contentBx h3 {
+footer .container .card .content .contentBx h3 {
   font-family: "Montserrat", sans-serif;
   color: #fff;
   text-transform: uppercase;
@@ -544,22 +634,22 @@ footer {
   line-height: 1.1em;
 }
 
-.container .card .content .contentBx h3 span {
+footer .container .card .content .contentBx h3 span {
   font-size: 15px;
   font-weight: 300;
   text-transform: initial;
 }
 
-.sci {
+footer .sci {
   position: absolute;
-  bottom: 35px;
+  bottom: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding-left: 0rem;
 }
 
-.sci li {
+footer .sci li {
   list-style: none;
   margin: 0 10px;
   -webkit-transform: translateY(40px);
@@ -571,24 +661,30 @@ footer {
           transition-delay: calc(0.1s var(--i));
 }
 
-.sci li a {
+footer .sci li a {
   color: #fff;
   font-size: 24px;
 }
 
-.container .card:hover {
-  background: rgba(58, 60, 68, 0.5);
-  -webkit-transition: 1.5s;
-  transition: 1.5s;
+footer .container .card:hover {
+  background: rgba(0, 0, 0, 0.3);
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
-.container .card:hover .content {
+footer .container .card:hover .content {
   opacity: 1;
 }
 
-.container .card:hover .sci li {
+footer .container .card:hover .sci li {
   -webkit-transform: translateX(0px);
           transform: translateX(0px);
   opacity: 1;
+}
+
+@media (min-width: 768px) {
+  footer header .navBar .logo {
+    padding: 1% 2% 0%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,7 +1,7 @@
 @font-face {
   font-family: "fleshandblood";
-  src: url("fleshandblood.woff2") format("woff2"),
-    url("fleshandblood.woff") format("woff");
+  src: url(./Assets/fleshandblood.woff2) format("woff2"),
+    url(./Assets/fleshandblood.woff) format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -36,6 +36,16 @@ body {
   }
 }
 
+.title {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px 10px 0px;
+  padding: 10px;
+
+  text-shadow: 0px 0px 13px rgba(255, 255, 255, 0.3);
+}
 //!!!!!!!BOTONES//////////////////////////////
 .myButton {
   box-shadow: inset 0px -3px 7px 0px $red-violet-color-wheel;
@@ -179,7 +189,7 @@ header {
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(10px);
   .loginContent {
-      height: 400px;
+    height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -189,6 +199,15 @@ header {
     padding: 10px;
     text-align: center;
     font-family: "Montserrat", sans-serif;
+    h1 {
+      font-family: "fleshandblood", sans-serif;
+      font-weight: bold;
+      font-size: 2.2em;
+      text-shadow: 0px 0px 13px rgba(255, 255, 255, 0.3);
+    }
+    span {
+      color: red;
+    }
     label {
       font-size: 1.1em;
       font-weight: bold;
@@ -202,6 +221,9 @@ header {
     i {
       color: $baby-powder;
     }
+    input{
+      padding: 1%;
+    }
   }
 }
 
@@ -212,100 +234,162 @@ header {
 //!footer////////////////////////////////////////////////
 
 footer {
+  margin-top: 30px;
+  padding: 10px 30px;
   display: flex;
   flex-direction: column;
-}
-.container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  margin: 40px 0;
-  .card {
-    position: relative;
-    width: 300px;
-    height: 370px;
-    background-color: rgba(255, 255, 255, 0.05);
-    margin: 20px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-    border-radius: 15px;
+  background-color: rgb(33, 31, 42);
+  border-top: 1px solid $charcoal;
+  backdrop-filter: blur(10px);
+  .box-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    backdrop-filter: blur(10px);
-  }
-}
-.container .card .content {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  opacity: 0.5;
-  transition: 0.5s;
-  .imgBx {
-    position: relative;
-    width: 150px;
-    height: 150px;
-    border-radius: 75px;
-    overflow: hidden;
-    border: 10px solid rgba(0, 0, 0, 0.25);
-    img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    .box {
+      padding: 2%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-items: center;
+      border: 1px solid $charcoal;
+      h3 {
+        margin: 0;
+      }
+      p {
+        text-align: center;
+      }
     }
-  }
-  .contentBx {
-    font-size: 12px;
-    font-weight: 300;
-    text-transform: initial;
-    h3 {
-      font-family: "Montserrat", sans-serif;
-      color: #fff;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-weight: 500;
-      font-size: 15px;
-      text-align: center;
-      margin: 20px 3px 10px;
-      line-height: 1.1em;
-      span {
-        font-size: 15px;
-        font-weight: 300;
-        text-transform: initial;
+    .info {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      align-items: center;
+      i {
+        font-size: 20px;
+        margin: 15px;
+        position: relative;
+        text-shadow: 0px 0px 13px rgba(255, 255, 255, 0.3);
       }
     }
   }
-}
 
-.sci {
-  position: absolute;
-  bottom: 35px;
-  display: flex;
-  padding-left: 0rem;
-  li {
-    list-style: none;
-    margin: 0 10px;
-    transform: translateY(40px);
-    transition: 0.5s;
-    opacity: 0;
-    transition-delay: calc(0.1s var(--i));
-    a {
-      color: #fff;
-      font-size: 24px;
+  .hechoPor {
+    border-top: 1px solid $charcoal;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    p {
+      text-align: center;
+      margin-top: 0px;
     }
   }
-}
 
-.container .card:hover .content {
-  opacity: 1;
-}
-.container .card:hover .sci li {
-  transform: translateX(0px);
-  opacity: 1;
+  .container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 40px 0px 10px;
+
+    .card {
+      position: relative;
+      width: 300px;
+      height: 370px;
+      background-color: rgba(0, 0, 0, 0.1);
+      margin: 20px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+      border-radius: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      backdrop-filter: blur(10px);
+    }
+  }
+
+  .container .card .content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0.5;
+    transition: 0.5s;
+
+    .imgBx {
+      position: relative;
+      width: 150px;
+      height: 150px;
+      border-radius: 75px;
+      overflow: hidden;
+      border: 10px solid rgba(0, 0, 0, 0.25);
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .contentBx {
+      font-size: 12px;
+      font-weight: 300;
+      text-transform: initial;
+
+      h3 {
+        font-family: "Montserrat", sans-serif;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 500;
+        font-size: 15px;
+        text-align: center;
+        margin: 20px 3px 10px;
+        line-height: 1.1em;
+
+        span {
+          font-size: 15px;
+          font-weight: 300;
+          text-transform: initial;
+        }
+      }
+    }
+  }
+
+  .sci {
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+    padding-left: 0rem;
+
+    li {
+      list-style: none;
+      margin: 0 10px;
+      transform: translateY(40px);
+      transition: 0.5s;
+      opacity: 0;
+      transition-delay: calc(0.1s var(--i));
+
+      a {
+        color: #fff;
+        font-size: 24px;
+      }
+    }
+  }
+  .container .card:hover {
+    background: rgba(0, 0, 0, 0.3);
+    transition: 1s;
+  }
+  .container .card:hover .content {
+    opacity: 1;
+  }
+
+  .container .card:hover .sci li {
+    transform: translateX(0px);
+    opacity: 1;
+  }
 }

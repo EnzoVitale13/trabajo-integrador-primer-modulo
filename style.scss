@@ -1,7 +1,7 @@
 @font-face {
   font-family: "fleshandblood";
-  src: url("fleshandblood.woff2") format("woff2"),
-    url("fleshandblood.woff") format("woff");
+  src: url("./Assets/fleshandblood.woff2") format("woff2"),
+    url("./Assets/fleshandblood.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -35,9 +35,9 @@ body {
   a {
     color: $baby-powder;
     text-decoration: none;
-    &:hover{
+    &:hover {
       color: white;
-      text-shadow: 0px 0px 13px rgba(255,255,255,0.5);
+      text-shadow: 0px 0px 13px rgba(255, 255, 255, 0.5);
     }
   }
 }
@@ -45,7 +45,11 @@ body {
 //!!!!!!!BOTONES//////////////////////////////
 .myButton {
   box-shadow: inset 0px -3px 7px 0px $red-violet-color-wheel;
-  background: linear-gradient(to bottom, $red-violet-color-wheel 5%, $wine 100%);
+  background: linear-gradient(
+    to bottom,
+    $red-violet-color-wheel 5%,
+    $wine 100%
+  );
   background-color: $red-violet-color-wheel;
   border-radius: 3px;
   border: 1px solid #0b0e07;
@@ -59,9 +63,11 @@ body {
 }
 
 .myButton:hover {
-  background: linear-gradient(to bottom,
-      $wine 5%,
-      $red-violet-color-wheel 100%);
+  background: linear-gradient(
+    to bottom,
+    $wine 5%,
+    $red-violet-color-wheel 100%
+  );
   background-color: $wine;
 }
 
@@ -78,6 +84,7 @@ header {
   flex-direction: column;
   position: sticky;
   top: 0;
+  border-bottom: 1px solid $charcoal;
 
   .navBar {
     padding: 1%;
@@ -131,11 +138,12 @@ header {
       padding: 20px;
       width: 100%;
       margin: -3px auto;
-      border-top: 1px solid;
+      border: 1px solid $charcoal;
       backdrop-filter: blur(10px);
 
       li {
         a {
+          font-size: 1.2em;
           font-family: "Montserrat", sans-serif;
           text-decoration: none;
           list-style: none;
@@ -150,7 +158,7 @@ header {
       }
     }
 
-    .menu-toggle:checked+.toggle {
+    .menu-toggle:checked + .toggle {
       display: block;
       transform: translate(0%);
     }
@@ -232,6 +240,8 @@ header {
   text-align: center;
   margin: 10px 10px 0px;
   padding: 10px;
+
+  text-shadow: 0px 0px 13px rgba(255, 255, 255, 0.3);
 }
 
 .products {
@@ -246,10 +256,12 @@ header {
 
 .products .productCard {
   background: rgb(0, 0, 0);
-  background: linear-gradient(183deg,
-  rgba(58, 60, 68, 0.5) 0%,
-      rgba(0, 0, 0, 0.514) 51%,
-      rgba(45, 0, 0, 1) 100%);
+  background: linear-gradient(
+    183deg,
+    rgba(58, 60, 68, 0.5) 0%,
+    rgba(0, 0, 0, 0.514) 51%,
+    rgba(45, 0, 0, 1) 100%
+  );
   width: 300px;
   height: 450px;
   display: flex;
@@ -326,7 +338,7 @@ header {
 
 //!contacto///////////////////////////////////////
 .contact {
-  border: 1px  $charcoal;
+  border: 1px $charcoal;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -347,6 +359,8 @@ header {
       width: 100%;
       height: 100%;
       object-fit: fill;
+      border-radius: 15px;
+      border: 10px solid rgba(0, 0, 0, 0.25);
     }
   }
 
@@ -358,7 +372,7 @@ header {
     align-items: flex-start;
     .input {
       padding: 1% 0% 1% 0%;
-      label{
+      label {
         font-size: 14px;
       }
     }
@@ -374,8 +388,56 @@ header {
 //!footer////////////////////////////////////////////////
 
 footer {
+  margin-top: 30px;
+  padding: 10px 30px;
   display: flex;
   flex-direction: column;
+  background-color: rgb(33, 31, 42);
+  border-top: 1px solid $charcoal;
+  backdrop-filter: blur(10px);
+  .box-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .box {
+      padding: 2%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-items: center;
+      border:1px solid $charcoal;
+      h3{
+        margin: 0;
+      }
+      p{
+        text-align: center;
+      }
+    }
+    .info {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      align-items: center;
+      i{
+        font-size: 20px;
+        margin: 15px;
+        position: relative;
+        text-shadow: 0px 0px 13px rgba(255, 255, 255, 0.3)
+
+      }
+  }
+}
+
+.hechoPor{
+  border-top: 1px solid $charcoal;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  p{
+    text-align: center;
+    margin-top: 0px;
+  }
 }
 
 .container {
@@ -384,20 +446,20 @@ footer {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin: 40px 0;
+  margin: 40px 0px 10px;
 
   .card {
     position: relative;
     width: 300px;
     height: 370px;
-    background-color: rgba(58, 60, 68, 0.1);
+    background-color: rgba(0, 0, 0, 0.1);
     margin: 20px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
     border-radius: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(10px);
   }
 }
 
@@ -455,7 +517,7 @@ footer {
 
 .sci {
   position: absolute;
-  bottom: 35px;
+  bottom: 30px;
   display: flex;
   padding-left: 0rem;
 
@@ -473,9 +535,9 @@ footer {
     }
   }
 }
-.container .card:hover{
-  background: rgba(58, 60, 68, 0.5);
-  transition: 1.5s;
+.container .card:hover {
+  background: rgba(0, 0, 0, 0.3);
+  transition: 1s;
 }
 .container .card:hover .content {
   opacity: 1;
@@ -489,8 +551,9 @@ footer {
 ///////////////////////////////
 //!mediaQueries///////////////////////////////////////////
 
-// @media (max-width: 768px) {
-//     .hamburguer{
-//     display: none;
-//     }
-// }
+@media (min-width: 768px) {
+  header .navBar .logo {
+    padding: 1% 2% 0%;
+  }
+}
+}
