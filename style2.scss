@@ -27,25 +27,23 @@ $baby-powder: rgba(255, 255, 250, 1);
 .menu-toggle {
   display: none;
 }
-
 body {
   background-color: $rich-black-fogra-39;
   color: $baby-powder;
-
   a {
     color: $baby-powder;
     text-decoration: none;
-    &:hover{
-      color: white;
-      text-shadow: 0px 0px 13px rgba(255,255,255,0.5);
-    }
   }
 }
 
 //!!!!!!!BOTONES//////////////////////////////
 .myButton {
   box-shadow: inset 0px -3px 7px 0px $red-violet-color-wheel;
-  background: linear-gradient(to bottom, $red-violet-color-wheel 5%, $wine 100%);
+  background: linear-gradient(
+    to bottom,
+    $red-violet-color-wheel 5%,
+    $wine 100%
+  );
   background-color: $red-violet-color-wheel;
   border-radius: 3px;
   border: 1px solid #0b0e07;
@@ -57,20 +55,20 @@ body {
   text-decoration: none;
   text-shadow: 0px 1px 0px #662626;
 }
-
 .myButton:hover {
-  background: linear-gradient(to bottom,
-      $wine 5%,
-      $red-violet-color-wheel 100%);
+  background: linear-gradient(
+    to bottom,
+    $wine 5%,
+    $red-violet-color-wheel 100%
+  );
   background-color: $wine;
 }
-
 .myButton:active {
   position: relative;
   top: 1px;
 }
 
-//!Header/////////////////////////////////////////////
+//!header
 
 header {
   z-index: 3;
@@ -78,7 +76,6 @@ header {
   flex-direction: column;
   position: sticky;
   top: 0;
-
   .navBar {
     padding: 1%;
     height: 60px;
@@ -87,7 +84,6 @@ header {
     justify-content: space-between;
     align-items: center;
     flex-wrap: nowrap;
-
     .logo {
       background-color: $rich-black-fogra-39;
       padding: 2% 2% 0%;
@@ -100,12 +96,10 @@ header {
       font-weight: bold;
       text-decoration: none;
       cursor: pointer;
-
       &:hover {
         transform: scale(1.05);
         transition: 0.5s;
       }
-
       span {
         font-family: "fleshandblood", sans-serif;
         color: #ff002b;
@@ -133,7 +127,6 @@ header {
       margin: -3px auto;
       border-top: 1px solid;
       backdrop-filter: blur(10px);
-
       li {
         a {
           font-family: "Montserrat", sans-serif;
@@ -142,7 +135,6 @@ header {
           display: block;
           padding: 10px 0;
           color: $baby-powder;
-
           &:hover {
             color: red;
           }
@@ -150,106 +142,31 @@ header {
       }
     }
 
-    .menu-toggle:checked+.toggle {
+    .menu-toggle:checked + .toggle {
       display: block;
       transform: translate(0%);
     }
-
-    // ul {
-    //   display: none;
-    //   background-color: rgb(24, 24, 24);
-    //   position: absolute;
-    //   top: 4em;
-    //   right: 1em;
-    // }
   }
 }
 
-/////////////////////
-//!main////////////////////////////////////////////////////
+//!LOGIN
 
-.bienvenidos {
+.login {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
   flex-direction: column;
-  align-items: center;
-
-  h1 {
-    font-family: "Montserrat", sans-serif;
-    text-align: center;
-    color: white;
-    font-weight: bold;
-    padding: 2%;
-    margin: auto;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-
-    span {
-      color: red;
-      // font-family: "fleshandblood", sans-serif;
-    }
-  }
-
-  .description {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
-
-    .doll {
-      padding: 4% 1% 0%;
-      width: 320px;
-      border-radius: 20px;
-      opacity: 0.5;
-      transition: 0.5s;
-
-      &:hover {
-        opacity: 1;
-      }
-    }
-
-    p {
-      padding: 20px;
-      text-align: center;
-      margin: 4%;
-    }
-
-    button {
-      padding: 10px;
-      width: 100px;
-      background-color: rgba(22, 22, 22, 0.5);
-
-      a {
-        text-decoration: none;
-      }
-    }
-  }
 }
 
-.title {
-  font-family: "Montserrat", sans-serif;
-  text-transform: uppercase;
-  font-weight: bold;
-  text-align: center;
-  margin: 10px 10px 0px;
-  padding: 10px;
-}
-
-.products {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  align-items: center;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-.products .productCard {
+.login .loginContainer {
   background: rgb(0, 0, 0);
-  background: linear-gradient(183deg,
-  rgba(58, 60, 68, 0.5) 0%,
-      rgba(0, 0, 0, 0.514) 51%,
-      rgba(45, 0, 0, 1) 100%);
+  background: linear-gradient(
+    183deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(0, 0, 0, 0.514) 51%,
+    rgba(45, 0, 0, 1) 100%
+  );
   width: 300px;
   height: 450px;
   display: flex;
@@ -261,114 +178,35 @@ header {
   border-radius: 15px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(10px);
-
-  .productContent {
+  .loginContent {
+      height: 400px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     opacity: 0.5;
     transition: 0.5s;
-
-    .productImg {
-      margin-top: 2%;
-      position: relative;
-      width: 220px;
-      height: 190px;
-      overflow: hidden;
-      border: 5px solid rgba(0, 0, 0, 0.25);
-
-      img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    }
-
-    .productDesc {
-      padding: 10px;
+    padding: 10px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    label {
+      font-size: 1.1em;
+      font-weight: bold;
       text-align: center;
-      font-family: "Montserrat", sans-serif;
-
-      h3 {
-        font-size: 1.5em;
-        font-weight: bold;
-        text-align: center;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-      }
-
-      p {
-        padding: 2%;
-      }
-
-      i {
-        color: $baby-powder;
-      }
+      text-transform: capitalize;
+      letter-spacing: 2px;
+    }
+    p {
+      padding: 2%;
+    }
+    i {
+      color: $baby-powder;
     }
   }
 }
 
-.products .productCard:hover .productContent {
+.login .loginContainer:hover .loginContent {
   opacity: 1;
-}
-
-.carouselClients {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-items: center;
-  align-content: center;
-}
-
-//!contacto///////////////////////////////////////
-.contact {
-  border: 1px  $charcoal;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(58, 60, 68, 0.5);
-  margin: 10px 30px;
-  border-radius: 10px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(10px);
-  .messengers {
-    position: relative;
-    width: 180px;
-    height: 230px;
-    overflow: hidden;
-    margin: 0px 0px 10px;
-    img {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      object-fit: fill;
-    }
-  }
-
-  .formBx {
-    margin: 10px;
-    padding: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    .input {
-      padding: 1% 0% 1% 0%;
-      label{
-        font-size: 14px;
-      }
-    }
-
-    .enviarMensaje {
-      position: relative;
-      top: 0;
-      right: -60px;
-    }
-  }
 }
 
 //!footer////////////////////////////////////////////////
@@ -377,7 +215,6 @@ footer {
   display: flex;
   flex-direction: column;
 }
-
 .container {
   position: relative;
   display: flex;
@@ -385,22 +222,20 @@ footer {
   align-items: center;
   flex-wrap: wrap;
   margin: 40px 0;
-
   .card {
     position: relative;
     width: 300px;
     height: 370px;
-    background-color: rgba(58, 60, 68, 0.1);
+    background-color: rgba(255, 255, 255, 0.05);
     margin: 20px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
     border-radius: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(10px);
   }
 }
-
 .container .card .content {
   position: relative;
   display: flex;
@@ -409,7 +244,6 @@ footer {
   flex-direction: column;
   opacity: 0.5;
   transition: 0.5s;
-
   .imgBx {
     position: relative;
     width: 150px;
@@ -417,7 +251,6 @@ footer {
     border-radius: 75px;
     overflow: hidden;
     border: 10px solid rgba(0, 0, 0, 0.25);
-
     img {
       position: absolute;
       top: 0;
@@ -427,12 +260,10 @@ footer {
       object-fit: cover;
     }
   }
-
   .contentBx {
     font-size: 12px;
     font-weight: 300;
     text-transform: initial;
-
     h3 {
       font-family: "Montserrat", sans-serif;
       color: #fff;
@@ -443,7 +274,6 @@ footer {
       text-align: center;
       margin: 20px 3px 10px;
       line-height: 1.1em;
-
       span {
         font-size: 15px;
         font-weight: 300;
@@ -458,7 +288,6 @@ footer {
   bottom: 35px;
   display: flex;
   padding-left: 0rem;
-
   li {
     list-style: none;
     margin: 0 10px;
@@ -466,31 +295,17 @@ footer {
     transition: 0.5s;
     opacity: 0;
     transition-delay: calc(0.1s var(--i));
-
     a {
       color: #fff;
       font-size: 24px;
     }
   }
 }
-.container .card:hover{
-  background: rgba(58, 60, 68, 0.5);
-  transition: 1.5s;
-}
+
 .container .card:hover .content {
   opacity: 1;
 }
-
 .container .card:hover .sci li {
   transform: translateX(0px);
   opacity: 1;
 }
-
-///////////////////////////////
-//!mediaQueries///////////////////////////////////////////
-
-// @media (max-width: 768px) {
-//     .hamburguer{
-//     display: none;
-//     }
-// }

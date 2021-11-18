@@ -28,11 +28,6 @@ body a {
   text-decoration: none;
 }
 
-body a:hover {
-  color: white;
-  text-shadow: 0px 0px 13px rgba(255, 255, 255, 0.5);
-}
-
 .myButton {
   -webkit-box-shadow: inset 0px -3px 7px 0px #912f40;
           box-shadow: inset 0px -3px 7px 0px #912f40;
@@ -160,110 +155,27 @@ header .navBar .menu-toggle:checked + .toggle {
           transform: translate(0%);
 }
 
-.bienvenidos {
+.login {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
-.bienvenidos h1 {
-  font-family: "Montserrat", sans-serif;
-  text-align: center;
-  color: white;
-  font-weight: bold;
-  padding: 2%;
-  margin: auto;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-.bienvenidos h1 span {
-  color: red;
-}
-
-.bienvenidos .description {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.bienvenidos .description .doll {
-  padding: 4% 1% 0%;
-  width: 320px;
-  border-radius: 20px;
-  opacity: 0.5;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-.bienvenidos .description .doll:hover {
-  opacity: 1;
-}
-
-.bienvenidos .description p {
-  padding: 20px;
-  text-align: center;
-  margin: 4%;
-}
-
-.bienvenidos .description button {
-  padding: 10px;
-  width: 100px;
-  background-color: rgba(22, 22, 22, 0.5);
-}
-
-.bienvenidos .description button a {
-  text-decoration: none;
-}
-
-.title {
-  font-family: "Montserrat", sans-serif;
-  text-transform: uppercase;
-  font-weight: bold;
-  text-align: center;
-  margin: 10px 10px 0px;
-  padding: 10px;
-}
-
-.products {
-  margin-top: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.products .productCard {
+.login .loginContainer {
   background: black;
-  background: linear-gradient(183deg, rgba(58, 60, 68, 0.5) 0%, rgba(0, 0, 0, 0.514) 51%, #2d0000 100%);
+  background: linear-gradient(183deg, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.514) 51%, #2d0000 100%);
   width: 300px;
   height: 450px;
   display: -webkit-box;
@@ -289,7 +201,8 @@ header .navBar .menu-toggle:checked + .toggle {
           backdrop-filter: blur(10px);
 }
 
-.products .productCard .productContent {
+.login .loginContainer .loginContent {
+  height: 400px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -297,146 +210,37 @@ header .navBar .menu-toggle:checked + .toggle {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   opacity: 0.5;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-}
-
-.products .productCard .productContent .productImg {
-  margin-top: 2%;
-  position: relative;
-  width: 220px;
-  height: 190px;
-  overflow: hidden;
-  border: 5px solid rgba(0, 0, 0, 0.25);
-}
-
-.products .productCard .productContent .productImg img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.products .productCard .productContent .productDesc {
   padding: 10px;
   text-align: center;
   font-family: "Montserrat", sans-serif;
 }
 
-.products .productCard .productContent .productDesc h3 {
-  font-size: 1.5em;
+.login .loginContainer .loginContent label {
+  font-size: 1.1em;
   font-weight: bold;
   text-align: center;
-  text-transform: uppercase;
+  text-transform: capitalize;
   letter-spacing: 2px;
 }
 
-.products .productCard .productContent .productDesc p {
+.login .loginContainer .loginContent p {
   padding: 2%;
 }
 
-.products .productCard .productContent .productDesc i {
+.login .loginContainer .loginContent i {
   color: #fffffa;
 }
 
-.products .productCard:hover .productContent {
+.login .loginContainer:hover .loginContent {
   opacity: 1;
-}
-
-.carouselClients {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-}
-
-.contact {
-  border: 1px #3a3c44;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: rgba(58, 60, 68, 0.5);
-  margin: 10px 30px;
-  border-radius: 10px;
-  -webkit-box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-}
-
-.contact .messengers {
-  position: relative;
-  width: 180px;
-  height: 230px;
-  overflow: hidden;
-  margin: 0px 0px 10px;
-}
-
-.contact .messengers img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: fill;
-     object-fit: fill;
-}
-
-.contact .formBx {
-  margin: 10px;
-  padding: 5px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
-.contact .formBx .input {
-  padding: 1% 0% 1% 0%;
-}
-
-.contact .formBx .input label {
-  font-size: 14px;
-}
-
-.contact .formBx .enviarMensaje {
-  position: relative;
-  top: 0;
-  right: -60px;
 }
 
 footer {
@@ -469,7 +273,7 @@ footer {
   position: relative;
   width: 300px;
   height: 370px;
-  background-color: rgba(58, 60, 68, 0.1);
+  background-color: rgba(255, 255, 255, 0.05);
   margin: 20px;
   -webkit-box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
           box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
@@ -483,8 +287,8 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
 }
 
 .container .card .content {
@@ -576,12 +380,6 @@ footer {
   font-size: 24px;
 }
 
-.container .card:hover {
-  background: rgba(58, 60, 68, 0.5);
-  -webkit-transition: 1.5s;
-  transition: 1.5s;
-}
-
 .container .card:hover .content {
   opacity: 1;
 }
@@ -591,4 +389,4 @@ footer {
           transform: translateX(0px);
   opacity: 1;
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style2.css.map */
