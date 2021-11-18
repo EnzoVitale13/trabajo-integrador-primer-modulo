@@ -20,8 +20,8 @@
 
 body {
   background: url(./trianglify-lowres.png);
-  background-size: cover;
   background-repeat: no-repeat;
+  background-size: cover;
   color: #fffffa;
 }
 
@@ -584,4 +584,4 @@ footer .container .card:hover .sci li {
             align-items: center;
   }
 }
-/*# sourceMappingURL=style2.css.map */
+/*# sourceMappingURL=style3.css.map */
